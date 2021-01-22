@@ -2,7 +2,7 @@ def product(A,u,v):
     r"""
     DESCRIPCIÓN:
 
-        Verifica si es posible el producto entre los siguientes tres elementos: 'A', 'u' y 'v'.
+        Calcula el producto de dos vectores 'u' y 'v'
 
     ENTRADA:
 
@@ -12,7 +12,7 @@ def product(A,u,v):
 
     SALIDA:
 
-        Devuelve el resultado obtenido.
+        Devuleve un número, el producto de 'u' y 'v'
 
     EJEMPLOS:
 
@@ -39,7 +39,7 @@ def proyOrt(A,u,v):
     r"""
     DESCRIPCIÓN:
 
-        Proyecta la ortogonalización.
+        Calcula la proyección ortogonal de 'u' sobre 'v'
 
     ENTRADA:
 
@@ -49,7 +49,7 @@ def proyOrt(A,u,v):
 
     SALIDA:
 
-        Devuelve una cadena de resultados del producto.
+        Devuelve (c, w), donde 'c' es el coeficiente de Fourier de 'u' con respecto a 'v'. 'w' es un vector, la proyección ortogonal de 'u' sobre 'v'.
 
     EJEMPLOS:
 
@@ -78,17 +78,17 @@ def coefFourier(A,B,v):
     r"""
     DESCRIPCIÓN:
 
-        Determina la serie de Fourier de las matrices dadas.
+        Calcula los coeficientes de Fourier de 'v' con respecto a la base ortogonal.
 
     ENTRADA:
 
         - A   -   Matriz
-        - B   -   Matriz
+        - B   -   Conjunto ortogonal
         - v   -   Vector
 
     SALIDA:
 
-        Devuelve la serie de Fourier de las matrices dadas.
+        Devuelve la lista 'c_1,...,c_r', donde c_1 es el coeficiente de Fourier de 'v' con respecto a la base ortogonal.
 
     EJEMPLOS:
 
@@ -119,16 +119,16 @@ def ortogonalizar(A,B):
     r"""
     DESCRIPCIÓN:
 
-        Construye a partir de un conjunto de vectores otro conjunto ortogonal de vectores que genere el mismo sub-espacio vectorial.
+        Aplica el proceso de ortogonalización de Gram - Schmidt
 
     ENTRADA:
 
-        - A   -   Vector
-        - B   -   Vector
+        - A   -   Matriz
+        - B   -   Colección de vectores linealmente independientes
 
     SALIDA:
 
-        Conjunto de vectores
+        Devuelve una lista de vectores, obtenida al aplicar el proceso de Gram - Schmidt
 
     EJEMPLOS:
 
