@@ -2,7 +2,8 @@ def product(A,u,v):
     r"""
     DESCRIPCIÓN:
 
-        Calcula el producto de dos vectores 'u' y 'v'
+        Verifica que la matriz dada sea positiva negativa, 
+        Calcula el producto interno de dos vectores 'u' y 'v'
 
     ENTRADA:
 
@@ -88,7 +89,7 @@ def coefFourier(A,B,v):
 
     SALIDA:
 
-        Devuelve la lista 'c_1,...,c_r', donde c_1 es el coeficiente de Fourier de 'v' con respecto a la base ortogonal.
+        Devuelve la lista 'c_1,...,c_r', donde c_i es el coeficiente de Fourier de 'v' con respecto a la base ortogonal.
 
     EJEMPLOS:
 
