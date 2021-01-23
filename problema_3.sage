@@ -45,7 +45,6 @@ m=matrix(objects[0]).nrows()
                         row.append(dato)
                     MatrizRelaciones.append(row)
 
-
         MatrizRelaciones=matrix(MatrizRelaciones).rref()                #Formar la ER
         for i in range(MatrizRelaciones.nrows() - 2):                   #Formatear las últimas dos lineas
             print ('[', end=" ")
@@ -53,4 +52,4 @@ m=matrix(objects[0]).nrows()
                 print ('{:>3s}'.format(str(MatrizRelaciones[i][j])), end=" ")
             print (']')   
     else:
-        print("Los elementos deben pertenecer al mismo espacio V")
+        print("Deben pertenecer al mismo espacio vectorial (tener la misma dimensión)")
