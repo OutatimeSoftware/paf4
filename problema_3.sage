@@ -17,38 +17,40 @@ def MatRel(*elementos):
     
     '''
 
-    m=objects[0].nrows()
-    n=objects[0].ncols()
-
-
-     #Comprobar si es posible la operación
+m=matrix(objects[0]).nrows()
+    n=matrix(objects[0]).ncols()
+    #Comprobar si es posible la operación
     flag=False
     for obj in objects:
-        if(m == obj.nrows() and n == obj.cols()):
+        if(m == matrix(obj).nrows() and n == matrix(obj).ncols()):
             flag=True
         else:
             flag=False
             break
-    if(flag):                                                                   #Bandera que comprueba si es posible
-        MatrizDeRelaciones=[]
-        for x in range(n):                                                      #Comenzamos a formar la matriz
-            for y in range(m):
+    if(flag):
+        MR=[]
+        if(m==1):                                                       #formar matriz(trabajar con vectores)
+            for x in range(n):
                 row=[]
                 for obj in objects:
-                    elemento = obj[x][y]
-                    row.append(elemento)
-                MatrizDeRelaciones.append(row)
+                    dato = obj[x]
+                    row.append(dato)
+                MatrizRelaciones.append(row)
+        else:
+            for x in range(n):                                          #formar matriz(trabajar con matrices)
+                for y in range(m):
+                    row=[]
+                    for obj in objects:
+                        dato = obj[x][y]
+                        row.append(dato)
+                    MatrizRelaciones.append(row)
 
-        MatrizDeRelaciones=MatrizDeRelaciones.rref()                            #Formar la ER
-        for i in range(len(MatrizDeRelaciones)):
+
+        MatrizRelaciones=matrix(MatrizRelaciones).rref()                #Formar la ER
+        for i in range(MatrizRelaciones.nrows() - 2):                   #Formatear las últimas dos lineas
             print ('[', end=" ")
-            for j in range(len(MatrizDeRelaciones[i])):
-                print ('{:>3s}'.format(str(MatrizDeRelaciones[i][j])), end=" ") #Imprimir la ER
-            print (']')
+            for j in range(MatrizRelaciones.ncols()):
+                print ('{:>3s}'.format(str(MatrizRelaciones[i][j])), end=" ")
+            print (']')   
     else:
         print("Los elementos deben pertenecer al mismo espacio V")
-
-
-
-
-MatRel([[1,0],[1,1]],[[0,1],[1,0]],[[2,3],[5,2]],[[1,1],[2,1]])
