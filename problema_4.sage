@@ -114,10 +114,7 @@ def proyOrt(A,u,v):
         
             Entrada:
             
-                A = 
-                    | 1, 0 |
-                    | 0, 1 |
-                    
+                A = [[1,0],[0,1]]
                 u = [-3, 9]
                 v = [ 1, 2]
             
@@ -131,10 +128,7 @@ def proyOrt(A,u,v):
        
            Entrada:
            
-               A = 
-                   | 1, 0 |
-                   | 0, 1 |
-                   
+               A = [[1,0],[0,1]]
                u = [7, -4, 5]
                v = [2, -1, 2]
            
@@ -148,9 +142,13 @@ def proyOrt(A,u,v):
        
            Entrada:
            
+               A = [[1,1,1],[0,0,0]]
+               u = [5, 7 , 2]
+               v = [2, 5, 5]
+           
            Salida:
            
-               >
+               > La matriz A no es positiva definida
        
        ::
        
@@ -158,9 +156,13 @@ def proyOrt(A,u,v):
        
            Entrada:
            
+               A = [[7,2],[2,1]]
+               u = [1,1]
+               v = [2,2]
+           
            Salida:
            
-               >
+               > (1/2, (1, 1))
 
     AUTORES:
 
@@ -205,10 +207,7 @@ def coefFourier(A,B,v):
         
            Entrada:
            
-               A =
-                   | 1, 0 |
-                   | 0, 1 |
-               
+               A = [[1,0],[0,1]]
                B = {[1,2,2],[2,-2,1],[2,1,-2]}
                v = [3,4,5]
            
@@ -220,11 +219,21 @@ def coefFourier(A,B,v):
 
         # Caso 2
         
-            Entrada:
+            Entrada: 
             
+                A = [[7,2],[2,1]]
+                B = {[1,1],[1,-1],[0,1]}
+                v = [2,1]
+                
             Salida:
             
-                >
+                > 
+                
+                    7/4
+                    11/4
+                    5
+                    (7/4, 11/4, 5)
+
         
         ::
         
@@ -232,9 +241,13 @@ def coefFourier(A,B,v):
         
             Entrada:
             
+                A = [[2,2,1],[2,1,1]]
+                B = {[1,1,0],[1,-1,1],[0,1,0]}
+                v = [2,1,2]
+            
             Salida:
             
-                >
+                > La matriz A no es positiva definida
         
         ::
         
@@ -242,9 +255,18 @@ def coefFourier(A,B,v):
         
             Entrada:
             
+                A = [[1,0],[0,1]]
+                B = {[1,-1],[-1,1],[1,1]}
+                v = [1,1]
+            
             Salida:
             
                 >
+                
+                    0
+                    0
+                    1
+                    (0, 0, 1)
 
     AUTORES:
 
@@ -290,10 +312,7 @@ def ortogonalizar(A,B):
         
             Entrada:
             
-                A =
-                    |1, 1, 1|
-                    |1, 0, 1|
-                
+                A = [[1,1,1],[1,0,1]]
                 a = [1,0,0]
                 b = [1,-1,0]
                 c = [1,0,1]
@@ -308,9 +327,14 @@ def ortogonalizar(A,B):
         
             Entrada:
             
+                A = [[1,0],[0,1]]
+                a = [1,2]
+                b = [2,1]
+                c = [1,1]
+            
             Salida:
             
-                >
+                > [(1, 2), (6/5, -3/5), (0, 0)]
         
         ::
         
@@ -318,9 +342,14 @@ def ortogonalizar(A,B):
         
             Entrada:
             
+                A = [[7,2],[2,1]]
+                a = [1,0]
+                b = [0,1]
+                c = [2,2]
+            
             Salida:
             
-                >
+                > [(1, 0), (-2/7, 1), (0, 0)]
         
         ::
         
@@ -328,9 +357,14 @@ def ortogonalizar(A,B):
         
             Entrada:
             
+                A = [[2, 2],[2,4]]
+                a = [1,2]
+                b = [2,3]
+                c = [3,4]
+            
             Salida:
             
-                >
+                > [(1, 2), (5/13, -3/13), (0, 0)]
 
 
     AUTORES:
@@ -356,13 +390,13 @@ def ortogonalizar(A,B):
         return "XD"
 
 
-A=matrix([[7,2],[2,1]])
-a=vector([1,0,0])
-b=vector([1,-1,0])
-c=vector([1,0,1])
-u=vector([1, 5])
-v=vector([4,4])
-print(product(A,u,v))
+A=matrix([[2, 2],[2,4]])
+a=vector([1,2])
+b=vector([2,3])
+c=vector([3,4])
+u=vector([1,1])
+v=vector([1,1])
+#print(product(A,u,v))
 #print(proyOrt(A,u,v))
 #print(coefFourier(A,(a,b,c),v))
-#print(ortogonalizar(A,(a,b,c)))
+print(ortogonalizar(A,(a,b,c)))
