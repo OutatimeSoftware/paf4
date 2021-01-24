@@ -16,7 +16,46 @@ def conjunto_g(R,o,t):
 
     EJEMPLOS:
 
-        # Caso 1
+        # Caso 1 
+        
+        Entrada:
+        
+        R =
+            | 1,  0,  8 |
+            | 1, -2,  1 |
+            |-1,  1, -4 |
+            |-2,  4, -1 |
+            
+         o = 1
+         t = 1
+         
+         Salida:
+        
+            La matriz de relaciones es linealmente independiente, la unica solucion es el vector 0
+            
+            
+       # Caso 2
+       
+       Entrada:
+       
+       R = 
+           [1, 1, 1,  1]
+           [1,-1, 9, -5]
+       
+       o = 3
+       o = 4
+       
+       Salida:
+       
+            [ 5]
+            [-4]
+            [-1]
+            [ 0]
+
+            [-2]
+            [ 3]
+            [ 0]
+            [-1]
 
     AUTORES:
 
@@ -87,6 +126,7 @@ def conjunto_g(R,o,t):
                 print("El tamaño específicado para la matriz no coincide con el tamaño de los vectores de la base")
         else:
             print("Opción inválida")
-#A=matrix(4,[1,1,0,0,0,0,0,0])
-#conjunto_g(A,1,1)
+            
+A=matrix([[1,1,1,1],[1,-1,9,-5]])
+conjunto_g(A,3,4)
       
