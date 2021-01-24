@@ -43,7 +43,7 @@ def conjunto_g(R,o,t):
            [1,-1, 9, -5]
        
        o = 3
-       o = 4
+       t = 4
        
        Salida:
        
@@ -56,6 +56,34 @@ def conjunto_g(R,o,t):
             [ 3]
             [ 0]
             [-1]
+            
+       # Caso 3
+       
+       Entrada:
+       
+            R = [[3,2,1],[1,2,3]]
+            o = 3
+            t = 7
+       
+       Salida:
+       
+           > El tamaño específicado para la matriz no coincide con el tamaño de los vectores de la base
+           
+           
+       # Caso 4
+       
+       Entrada:
+       
+           R = [[5,2,3],[1,1,1]]
+           o = 3
+           t = 3
+       
+       Salida:
+       
+           > 
+                [1/3]
+                [2/3]
+                [ -1]
 
     AUTORES:
 
@@ -127,6 +155,6 @@ def conjunto_g(R,o,t):
         else:
             print("Opción inválida")
             
-A=matrix([[1,1,1,1],[1,-1,9,-5]])
-conjunto_g(A,3,4)
+#A=matrix([[5,2,3],[1,1,1]])
+#conjunto_g(A,3,3)
       

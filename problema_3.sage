@@ -41,6 +41,29 @@ def matrizDeRelaciones(*objects):
                > 
                    [   1   0   1   1 ]
                    [   0   1   1  -1 ]
+                   
+       # Caso 3
+       
+           Entrada:
+               
+               [[1, 2],[3, 4]],[[1, 1],[1,1]],[[0,0],[0,0]],[[2,1],[1,1]]
+           
+           Salida:
+           
+               > 
+                    [   1   0   0   0 ]
+                    [   0   1   0   0 ]
+                    [   0   0   0   1 ]
+       
+       # Caso 4
+       
+           Entrada:
+               
+               [[1, 1, 1],[3, 4, 3]],[[0,0],[0,0]],[[2,1],[1,1]]
+               
+           Salida:
+           
+               > Deben pertenecer al mismo espacio vectorial (tener la misma dimensión)
     
     '''
     m=matrix(objects[0]).nrows() 
@@ -93,4 +116,4 @@ def matrizDeRelaciones(*objects):
     else:
         print("Deben pertenecer al mismo espacio vectorial (tener la misma dimensión)")
         
-matrizDeRelaciones([[1, -1],[2, 1]],[[-1, 1],[1,2]],[[0,0],[3,3]],[[2,-2],[1,-1]])
+matrizDeRelaciones([[1, 1, 1],[3, 4, 3]],[[0,0],[0,0]],[[2,1],[1,1]])

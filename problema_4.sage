@@ -16,15 +16,14 @@ def product(A,u,v):
         Devuleve un número, el producto de 'u' y 'v'
 
     EJEMPLOS:
+    
+    ::
 
         # Caso 1
         
         Entrada:
         
-        A =
-            | 1, 0 |
-            | 0, 1 |
-            
+        A = [[1,0],[0,1]]
         u = [1,1]
         v = [1,1]
         
@@ -32,20 +31,47 @@ def product(A,u,v):
             
             > 2
             
+            ::
+            
         # Caso 2
         
         Entrada:
         
-        A =
-            | 1, 0 |
-            | 0, 1 |
-            
+        A = [[1,0],[0,1]]      
         u = [1,2,1]
         v = [1,1]
         
         Salida:
         
             > Las dimenciones de los datos proporcionados no son compatibles
+            
+            ::
+            
+       # Caso 3
+       
+           Entrada:
+           
+                        A = [[1,1],[1,1]]
+                        u = [7, -4, 5]
+                        v = [3, 3, 4]
+           
+           Salida:
+           
+               > La matriz A no es positiva definida
+               
+           ::
+       
+       # Caso 4
+       
+           Entrada:
+           
+                    A = [[7,2],[2,1]]
+                    u = [4,4]
+                    v = [1,5]
+           
+           Salida:
+           
+               > 96
 
     AUTORES:
 
@@ -81,6 +107,8 @@ def proyOrt(A,u,v):
         Devuelve (c, w), donde 'c' es el coeficiente de Fourier de 'u' con respecto a 'v'. 'w' es un vector, la proyección ortogonal de 'u' sobre 'v'.
 
     EJEMPLOS:
+    
+        ::
 
         # Caso 1
         
@@ -97,7 +125,8 @@ def proyOrt(A,u,v):
             
                 > (3, (3, 6))
                 
-                
+        ::
+       
        # Caso 2
        
            Entrada:
@@ -112,6 +141,26 @@ def proyOrt(A,u,v):
            Salida:
            
                > Las dimenciones de los datos proporcionados no son compatibles
+               
+       ::        
+               
+       # Caso 3
+       
+           Entrada:
+           
+           Salida:
+           
+               >
+       
+       ::
+       
+      # Caso 4
+       
+           Entrada:
+           
+           Salida:
+           
+               >
 
     AUTORES:
 
@@ -150,6 +199,8 @@ def coefFourier(A,B,v):
 
     EJEMPLOS:
 
+        ::
+
         # Caso 1
         
            Entrada:
@@ -164,6 +215,36 @@ def coefFourier(A,B,v):
            Salida:
            
                > Las dimenciones de los datos proporcionados no son compatibles
+
+        ::
+
+        # Caso 2
+        
+            Entrada:
+            
+            Salida:
+            
+                >
+        
+        ::
+        
+        # Caso 3
+        
+            Entrada:
+            
+            Salida:
+            
+                >
+        
+        ::
+        
+        # Caso 4
+        
+            Entrada:
+            
+            Salida:
+            
+                >
 
     AUTORES:
 
@@ -203,6 +284,8 @@ def ortogonalizar(A,B):
 
     EJEMPLOS:
 
+        ::
+
         # Caso 1
         
             Entrada:
@@ -218,6 +301,37 @@ def ortogonalizar(A,B):
             Salida:
             
                 > La matriz A no es positiva definida
+
+        ::
+        
+        # Caso 2
+        
+            Entrada:
+            
+            Salida:
+            
+                >
+        
+        ::
+        
+        # Caso 3w
+        
+            Entrada:
+            
+            Salida:
+            
+                >
+        
+        ::
+        
+        # Caso 4
+        
+            Entrada:
+            
+            Salida:
+            
+                >
+
 
     AUTORES:
 
@@ -242,13 +356,13 @@ def ortogonalizar(A,B):
         return "XD"
 
 
-A=matrix([[1,1,1],[1,0,1]])
+A=matrix([[7,2],[2,1]])
 a=vector([1,0,0])
 b=vector([1,-1,0])
 c=vector([1,0,1])
-u=vector([7, -4, 5])
-v=vector([3,4,5])
-#print(product(A,u,v))
+u=vector([1, 5])
+v=vector([4,4])
+print(product(A,u,v))
 #print(proyOrt(A,u,v))
 #print(coefFourier(A,(a,b,c),v))
-print(ortogonalizar(A,(a,b,c)))
+#print(ortogonalizar(A,(a,b,c)))
