@@ -18,6 +18,34 @@ def product(A,u,v):
     EJEMPLOS:
 
         # Caso 1
+        
+        Entrada:
+        
+        A =
+            | 1, 0 |
+            | 0, 1 |
+            
+        u = [1,1]
+        v = [1,1]
+        
+        Salida:
+            
+            > 2
+            
+        # Caso 2
+        
+        Entrada:
+        
+        A =
+            | 1, 0 |
+            | 0, 1 |
+            
+        u = [1,2,1]
+        v = [1,1]
+        
+        Salida:
+        
+            > Las dimenciones de los datos proporcionados no son compatibles
 
     AUTORES:
 
@@ -55,6 +83,35 @@ def proyOrt(A,u,v):
     EJEMPLOS:
 
         # Caso 1
+        
+            Entrada:
+            
+                A = 
+                    | 1, 0 |
+                    | 0, 1 |
+                    
+                u = [-3, 9]
+                v = [ 1, 2]
+            
+            Salida:
+            
+                > (3, (3, 6))
+                
+                
+       # Caso 2
+       
+           Entrada:
+           
+               A = 
+                   | 1, 0 |
+                   | 0, 1 |
+                   
+               u = [7, -4, 5]
+               v = [2, -1, 2]
+           
+           Salida:
+           
+               > Las dimenciones de los datos proporcionados no son compatibles
 
     AUTORES:
 
@@ -94,6 +151,19 @@ def coefFourier(A,B,v):
     EJEMPLOS:
 
         # Caso 1
+        
+           Entrada:
+           
+               A =
+                   | 1, 0 |
+                   | 0, 1 |
+               
+               B = {[1,2,2],[2,-2,1],[2,1,-2]}
+               v = [3,4,5]
+           
+           Salida:
+           
+               > Las dimenciones de los datos proporcionados no son compatibles
 
     AUTORES:
 
@@ -134,6 +204,20 @@ def ortogonalizar(A,B):
     EJEMPLOS:
 
         # Caso 1
+        
+            Entrada:
+            
+                A =
+                    |1, 1, 1|
+                    |1, 0, 1|
+                
+                a = [1,0,0]
+                b = [1,-1,0]
+                c = [1,0,1]
+                
+            Salida:
+            
+                > La matriz A no es positiva definida
 
     AUTORES:
 
@@ -158,14 +242,13 @@ def ortogonalizar(A,B):
         return "XD"
 
 
-product?
-#A=matrix(3,[1,0,0,0,1,0,0,0,1])
-#a=vector([1,1,1])
-#b=vector([0,1,1])
-#c=vector([0,0,1])
-#u=vector([1,2])
-#v=vector([18,-6,-9])
+A=matrix([[1,1,1],[1,0,1]])
+a=vector([1,0,0])
+b=vector([1,-1,0])
+c=vector([1,0,1])
+u=vector([7, -4, 5])
+v=vector([3,4,5])
 #print(product(A,u,v))
 #print(proyOrt(A,u,v))
 #print(coefFourier(A,(a,b,c),v))
-#print(ortogonalizar(A,(a,b,c)))
+print(ortogonalizar(A,(a,b,c)))
