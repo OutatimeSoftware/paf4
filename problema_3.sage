@@ -115,5 +115,3 @@ def matrizDeRelaciones(*objects):
             
     else:
         print("Deben pertenecer al mismo espacio vectorial (tener la misma dimensión)")
-        
-matrizDeRelaciones([[1, 1, 1],[3, 4, 3]],[[0,0],[0,0]],[[2,1],[1,1]])

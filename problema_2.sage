@@ -91,12 +91,7 @@ def conjunto_g(R,o,t):
         Jocelyn Novelo,
         Miguel Ávila,
         Jorge Reyes
-    """
-    n=R.nrows(); #Numero de filas
-    m=R.ncols(); #Numero de columnas
-    
-    ER=R.rref();          #La pasa a su forma reducida
-def conjunto_g(R,o,t): 
+    """ 
     n=R.nrows(); #Numero de filas
     m=R.ncols(); #Numero de columnas
     
@@ -154,7 +149,3 @@ def conjunto_g(R,o,t):
                 print("El tamaño específicado para la matriz no coincide con el tamaño de los vectores de la base")
         else:
             print("Opción inválida")
-            
-#A=matrix([[5,2,3],[1,1,1]])
-#conjunto_g(A,3,3)
-      
